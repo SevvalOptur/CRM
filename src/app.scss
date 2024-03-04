@@ -1,0 +1,150 @@
+@import './assets/style/color.scss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+}
+body{
+    background-color: $polar;
+}
+.container{
+    margin: 30px;
+    padding: 40px;
+    border-radius: 24px ;
+    background-color: $white;   
+}
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+} 
+.title{
+    margin-bottom: 70px;
+    -webkit-text-fill-color: $firefly; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $black;
+    font-weight: 700;
+    text-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.25);
+}
+.card{
+    width: 262px;
+    background: $polar;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    //margin: 35px 0;
+    padding: 30px 30px;
+    border-radius: 24px ;
+
+    &__title{
+        font-size: 22px;
+        font-weight: 700;
+    }
+    &__contents{
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+.button__title{
+    font-size: 16px;
+    font-weight: bold;
+    color: $firefly;
+    margin: 16px 0;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+}
+.buton{
+    max-width: 158px;
+    height: 48px;
+    margin: 20px 0;
+    background-color: $dodger-blue;
+    color: $white;
+    padding: 11px 16px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    &:hover{
+        background-color: $royal-blue;
+    }
+    &.disabled{
+        background-color: $geyser;
+    }
+    &.active{
+        background-color: $mariner;
+    }
+    &__text{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    &__first-icon{
+        position: relative;
+        top: 5px;
+        left: 5px;
+    }
+}
+.link__buton{
+    margin: 18px 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: $dodger-blue;
+    text-decoration: none;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    &:hover{
+        text-decoration: underline;
+    }
+    &.active{
+        text-decoration: underline;
+        color: $mariner;
+    }
+    &.disabled{
+        text-decoration: none;
+        color: $geyser;
+    }
+    &__icon{
+        position: relative;
+        top: 5px;
+        left: 5px;
+    }
+}
+.card__buton{
+    width: 80px;
+    height: 80px;
+    border-radius: 24px;
+    padding: 15px;
+    background-color: $polar;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    &__button{
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background-color: $white;
+        border: none;
+        padding: 12px;
+    }
+    &.active {
+        .card__buton__button {
+            border: 1px solid $dodger-blue;
+            box-shadow: none;
+        }
+    }
+    &:hover{
+        box-shadow: none;
+    }
+    &.disabled{
+        fill: $geyser;
+        box-shadow: none;
+    }
+
+}
