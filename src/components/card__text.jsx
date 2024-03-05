@@ -6,8 +6,13 @@ const Card = (props) => {
   const { text1, text2 } = props;
 
   return (
-    <div className='card'>
-
+    <div className='card__text'>
+        <h1 className='card__text__title'>
+            {text1}
+        </h1>
+        <p className='card__text__contents'>
+            {text2}
+        </p>
     </div>
 
   );
